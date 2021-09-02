@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+body {
+  background-color: $white-color;
+  color: $primary-text-color;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  width: 1200px;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+
+  &--no-padding {
+    padding-top: 0;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
+.section__title,
+.advantages__title,
+.examples__title,
+.coworkers__name {
+  color: $title-text-color;
+  text-align: center;
+}

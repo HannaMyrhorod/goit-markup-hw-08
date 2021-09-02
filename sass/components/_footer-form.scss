@@ -1,0 +1,33 @@
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+
+  &__field {
+    display: flex;
+  }
+
+  &__input {
+    min-width: 358px;
+    min-height: 50px;
+    margin: 0;
+    margin-right: 12px;
+    padding: 15px 16px;
+    border: $footer-form-border;
+    border-radius: 4px;
+    outline: none;
+
+    background-color: inherit;
+    box-shadow: $button-shadow;
+
+    color: $white-color;
+    transition: border-color $transition-timing;
+
+    &:focus {
+      border-color: $accent-color;
+    }
+  }
+}
+.button__icon {
+  margin-left: 10px;
+}

@@ -1,0 +1,50 @@
+.footer {
+  display: flex;
+  flex-direction: row;
+  background-color: $dark-background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  &__content {
+    display: flex;
+  }
+  &__address {
+    margin-top: 20px;
+    margin-right: 70px;
+    color: $white-color;
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+  }
+  &__contact {
+    margin-top: 9px;
+  }
+  &__title {
+    margin-top: 12px;
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.17;
+    text-transform: uppercase;
+    color: $white-color;
+  }
+  &__list {
+    @extend %list;
+  }
+  &__link {
+    color: $transparent-white-color;
+    text-decoration: none;
+
+    transition: color $transition-timing;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  }
+}
+.networks__link--footer {
+  fill: $white-color;
+  background-color: $icons-transparent-white;
+}
