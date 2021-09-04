@@ -1,11 +1,24 @@
 .filters {
   @extend %list;
   display: flex;
-  justify-content: center;
-  margin-bottom: 50px;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin-bottom: 40px - (0.5 * $card-set-gap);
+
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
 
   &__item:not(:last-child) {
     margin-right: 8px;
+
+    @media screen and (max-width: $tablet - 1px) {
+      margin-bottom: 0.5 * $card-set-gap;
+    }
   }
 }
 .filters__button {

@@ -1,26 +1,47 @@
 .clients {
   @extend %list;
   display: flex;
-  justify-content: center;
-  align-items: center;
+
+  @media screen and (max-width: $desktop - 1px) {
+    flex-wrap: wrap;
+    margin: -0.5 * $card-set-gap;
+  }
 
   &__item {
-    width: 170px;
+    @media screen and (max-width: $desktop - 1px) {
+      display: block;
+      width: calc((100% - 2 * #{$card-set-gap}) / 2);
+      margin: 0.5 * $card-set-gap;
+    }
 
-    &:not(:last-child) {
-      margin-right: 30px;
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 3 * #{$card-set-gap}) / 3);
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 170px;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
     }
   }
 
   &__icon {
     display: inline-block;
-    padding: 16px 32px;
+    padding: 16px 52px;
     border: 1px solid $icons-light-grey;
     border-radius: 4px;
     fill: $icons-light-grey;
 
     transition: fill $transition-timing, border-color $transition-timing;
 
+    @media screen and (min-width: $tablet) {
+      padding: 16px 60px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding: 16px 32px;
+    }
     &:hover,
     &:focus {
       fill: $accent-color;

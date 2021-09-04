@@ -1,11 +1,29 @@
 .advantages {
   @extend %list;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5 * $card-set-gap;
+  }
 
   &__item {
-    width: 270px;
+    width: 100%;
+
+    &:not(:last-child) {
+      @media screen and (max-width: $tablet - 1px) {
+        margin-bottom: $card-set-gap;
+      }
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 2 * #{$card-set-gap}) / 2);
+      margin: 0.5 * $card-set-gap;
+    }
+
+    @media screen and (min-width: $desktop) {
+      max-width: 270px;
+    }
   }
   &__icon {
     display: flex;
@@ -24,7 +42,11 @@
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      text-align: left;
+    }
   }
   &__text {
     font-size: 14px;

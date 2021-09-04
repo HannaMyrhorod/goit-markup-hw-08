@@ -1,18 +1,38 @@
 .card-set {
   @extend %list;
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -1 * $card-set-gap;
-  margin-top: -1 * $card-set-gap;
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: -0.5 * $card-set-gap;
+  }
+
+  &__item {
+    display: inline-block;
+
+    transition: box-shadow $transition-timing;
+
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 2 * #{$card-set-gap}) / 2);
+      margin: 0.5 * $card-set-gap;
+    }
+    @media screen and (min-width: $desktop) {
+      flex-basis: calc((100% - 3 * #{$card-set-gap}) / 3);
+    }
+
+    &:not(:last-child) {
+      @media screen and (max-width: $tablet - 1px) {
+        margin-bottom: $card-set-gap;
+      }
+    }
+  }
 }
 .product {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
-  flex-basis: calc(100% / 3 - #{$card-set-gap});
-  margin-left: $card-set-gap;
-  margin-top: $card-set-gap;
-
-  transition: box-shadow $transition-timing;
 
   &:hover,
   &:focus {
@@ -44,6 +64,9 @@
   }
 
   &__meta {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     padding: 20px 24px;
     border-right: $center-border;
     border-left: $center-border;
@@ -59,8 +82,6 @@
   }
 
   &__text {
-    margin-top: 4px;
-
     font-size: 16px;
     line-height: 1.87;
     color: $primary-text-color;
