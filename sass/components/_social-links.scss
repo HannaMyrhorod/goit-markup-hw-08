@@ -8,6 +8,14 @@
   &__item {
     padding-right: 10px;
     padding-left: 10px;
+
+    @media screen and (max-width: $tablet - 1px) {
+      &:hover,
+      &:focus {
+        color: $accent-dark-color;
+        transition: color $transition-timing;
+      }
+    }
   }
 
   &__item:not(:last-child) {

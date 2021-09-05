@@ -1,26 +1,52 @@
 .footer {
-  display: flex;
-  flex-direction: row;
   background-color: $dark-background-color;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding: 60px 0;
 
   &__content {
-    display: flex;
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      align-items: baseline;
+    }
+    @media screen and (min-width: $desktop) {
+      text-align: start;
+    }
   }
   &__address {
     margin-top: 20px;
-    margin-right: 70px;
     color: $white-color;
     font-style: normal;
     font-size: 14px;
     line-height: 1.71;
   }
+
+  &__contacts {
+    @media screen and (max-width: $desktop - 1px) {
+      margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+      margin-right: 165px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 70px;
+    }
+  }
+
   &__contact {
-    margin-top: 9px;
+    margin-top: 8px;
+    @media screen and (min-width: $desktop) {
+      margin-top: 9px;
+    }
+  }
+  &__join-section {
+    margin-bottom: 60px;
   }
   &__title {
-    margin-top: 12px;
+    display: block;
     margin-bottom: 20px;
 
     font-weight: 700;

@@ -1,17 +1,23 @@
 .footer-form {
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-
-  &__field {
-    display: flex;
+  @media screen and (max-width: $tablet - 1px) {
+    margin-top: 60px;
   }
 
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+  }
+
+  &__field {
+    @media screen and (min-width: $desktop) {
+      display: flex;
+    }
+  }
   &__input {
-    min-width: 358px;
+    width: 100%;
     min-height: 50px;
-    margin: 0;
-    margin-right: 12px;
+
     padding: 15px 16px;
     border: $footer-form-border;
     border-radius: 4px;
@@ -25,6 +31,19 @@
 
     &:focus {
       border-color: $accent-color;
+    }
+
+    @media screen and (min-width: $tablet) {
+      min-width: 450px;
+    }
+
+    @media screen and (max-width: $desktop - 1px) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      min-width: 358px;
+      margin-right: 12px;
     }
   }
 }

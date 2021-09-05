@@ -73,6 +73,10 @@
 
         color: $accent-color;
       }
+      &:hover,
+      &:focus {
+        color: $accent-dark-color;
+      }
     }
 
     @media screen and (min-width: $desktop) {
