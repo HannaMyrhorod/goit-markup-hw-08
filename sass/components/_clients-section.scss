@@ -9,7 +9,6 @@
 
   &__item {
     @media screen and (max-width: $desktop - 1px) {
-      display: block;
       width: calc((100% - 2 * #{$card-set-gap}) / 2);
       margin: 0.5 * $card-set-gap;
     }
@@ -19,7 +18,8 @@
     }
 
     @media screen and (min-width: $desktop) {
-      max-width: 170px;
+      flex-wrap: nowrap;
+      min-width: 170px;
 
       &:not(:last-child) {
         margin-right: 30px;
@@ -28,8 +28,10 @@
   }
 
   &__icon {
-    display: inline-block;
-    padding: 16px 52px;
+    display: flex;
+    padding: 16px 0;
+    align-items: center;
+    justify-content: center;
     border: 1px solid $icons-light-grey;
     border-radius: 4px;
     fill: $icons-light-grey;
