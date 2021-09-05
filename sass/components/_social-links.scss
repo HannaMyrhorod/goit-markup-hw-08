@@ -1,0 +1,29 @@
+.social-links {
+  @extend %list;
+  display: flex;
+  justify-content: start;
+  margin-right: -10px;
+  margin-left: -10px;
+
+  &__item {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+  &__item:not(:last-child) {
+    border-right: $modal-form-border;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}

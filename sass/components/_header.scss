@@ -1,55 +1,9 @@
 .page-header {
+  position: relative;
   border-bottom: $center-border;
 
-  &__content,
   &__nav {
     display: flex;
     align-items: center;
-  }
-}
-.site-nav {
-  @extend %list;
-  display: flex;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  margin-left: 93px;
-
-  &__item:not(:last-child) {
-    margin-right: 50px;
-  }
-}
-.site-nav__link {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  color: $title-text-color;
-  text-decoration: none;
-
-  transition: color $transition-timing;
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
-  }
-
-  &--current {
-    position: relative;
-    color: $accent-color;
-
-    &::after {
-      content: '';
-      position: absolute;
-      left: 0;
-      bottom: -1px;
-
-      display: block;
-      width: 100%;
-      height: 4px;
-      background-color: $accent-color;
-      border-radius: 2px;
-    }
   }
 }
