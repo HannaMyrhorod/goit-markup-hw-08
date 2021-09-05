@@ -8,19 +8,41 @@
 
   background-color: $dark-background-color;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/overlay.jpg);
+    url(../images/m-hero.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/m-hero@2x.jpg);
+  }
+
   @media screen and (min-width: $tablet) {
     max-width: $tablet;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/t-hero.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/t-hero@2x.jpg);
+    }
   }
+
   @media screen and (min-width: $desktop) {
     max-width: 1600px;
     padding: 200px 0;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/d-hero.jpg);
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/d-hero@2x.jpg);
+    }
   }
+
   &__title {
     margin-bottom: 30px;
 
