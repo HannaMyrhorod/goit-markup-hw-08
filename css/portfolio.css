@@ -694,6 +694,10 @@ img {
           transform: translateY(0);
 }
 
+.product__image {
+  display: block;
+}
+
 .product__description {
   position: absolute;
   top: 0;
