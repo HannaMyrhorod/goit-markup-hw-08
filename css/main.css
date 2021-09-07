@@ -196,7 +196,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .menu {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     width: 100vw;
